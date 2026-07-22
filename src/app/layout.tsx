@@ -2,9 +2,9 @@ import type { Metadata } from 'next'
 import '../styles/globals.css'
 
 export const metadata: Metadata = {
-  title: 'Perri Luo - Building Financial Intelligence for the AI Era',
-  description: 'Finance × AI × Builder. Perri Luo is a finance student, builder, researcher, and AI explorer.',
-  keywords: ['finance', 'AI', 'builder', 'research', 'portfolio', 'Perri Luo'],
+  title: 'Perri Luo | Finance × AI × Builder',
+  description: 'Perri Luo - A finance student exploring the intersection of AI and financial research.',
+  keywords: ['finance', 'AI', 'portfolio', 'Perri Luo'],
 }
 
 export default function RootLayout({
