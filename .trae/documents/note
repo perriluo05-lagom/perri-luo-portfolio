@@ -1,0 +1,68 @@
+step1：初部确定框架
+👉chatgpt比较了解我，所以我和chatgpt进行了页面及内容设计的探讨，让他帮我生成输给trae的prompt(我强调了我在美观+内容呈现两方面的诉求)
+ tips：如果对颜色&字体设计有要求，率先说明，如:莫兰迪色系
+
+step2: 不断改进逻辑和设计
+👉最终形成的逻辑链是：我是一名金融学生（Landing），通过金融训练和市场经历（Journey），形成了研究和分析能力（Capability），过去通过项目证明能力（Projects），同时主动探索AI如何改变金融工作流（AI Lab），并形成对未来行业变化的判断（Research Notes）。
+ 'AI FINANCIAL Lab STRUCTURE
+ Exploring how AI reshapes financial workflows.
+
+ ────────────────────
+
+ AI Finance Workflow
+
+ Financial Understanding
+        │
+        ▼
+ Research Automation
+        │
+        ▼
+ Investment Intelligence
+        │
+        ▼
+ Human Decision Making
+
+ ────────────────────
+
+ Representative Case Studies
+
+ ① Financial Understanding
+ FinGPT
+
+ ↓
+
+ Financial Intelligence Report
+
+ ────────────────────
+
+ ② Research Automation
+ FinRobot
+
+ ↓
+
+ NVIDIA Equity Research Report
+
+ ────────────────────
+
+ ③ Investment Intelligence
+ TradingAgents
+
+ ↓
+
+ AI Investment Committee Simulation
+
+ ────────────────────
+
+ Key Takeaway
+
+ AI transforms financial workflows,
+ but strategic judgement remains a human responsibility.
+
+ ------------------------------------------------'
+·Research Automation
+  FinRobot → Equity Research(FinRobot:https://finrobot.ai/)
+  👉NVDA Report：https://finrobot.ai/output/NVDA/report/Professional_Equity_Report_NVDA.html
+  #finbot主要用于生成公司研报(金融二级市场卖方核心工作)
+·Investment Intelligence
+  TradingAgents(git clone到本地，运用trae调用分析)👉运用AI investment Committee对NVDA进行多维度分析
+  
