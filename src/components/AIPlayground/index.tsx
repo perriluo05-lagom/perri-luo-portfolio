@@ -64,10 +64,17 @@ export default function AIPlayground() {
                       }}
                     >
                       <motion.div
-                        animate={isActive ? { scale: [1, 1.2, 1] } : {}}
-                        transition={{ duration: 2, repeat: Infinity }}
+                        animate={{
+                          scale: [1, 1.4, 1],
+                          opacity: [0.3, 0, 0.3],
+                        }}
+                        transition={{
+                          duration: 2.5,
+                          repeat: Infinity,
+                          ease: 'easeInOut',
+                        }}
                         className="absolute inset-0 rounded-full"
-                        style={{ backgroundColor: `${experiment?.color}`, opacity: 0.2 }}
+                        style={{ backgroundColor: `${experiment?.color}` }}
                       />
                       <div
                         className="w-14 h-14 rounded-full flex items-center justify-center"
@@ -82,9 +89,19 @@ export default function AIPlayground() {
                     <h3 className="text-center text-lg font-medium text-white mb-2">
                       {stage}
                     </h3>
-                    <p className="text-center text-sm text-gray-500">
+                    <motion.p
+                      animate={{
+                        color: ['#8b949e', experiment?.color, '#8b949e'],
+                      }}
+                      transition={{
+                        duration: 2,
+                        repeat: Infinity,
+                        ease: 'easeInOut',
+                      }}
+                      className="text-center text-sm font-medium"
+                    >
                       Click to explore
-                    </p>
+                    </motion.p>
                   </motion.div>
 
                   {index < stages.length - 1 && (
@@ -138,16 +155,31 @@ export default function AIPlayground() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   onClick={() => setActiveStage(experiment.stage)}
-                  className="glass-card rounded-xl p-6 cursor-pointer hover:bg-dark-700/30 transition-all hover:scale-[1.02]"
+                  className="glass-card rounded-xl p-6 cursor-pointer hover:bg-dark-700/30 transition-all hover:scale-[1.02] relative overflow-hidden"
                 >
-                  <div
-                    className="w-12 h-12 rounded-lg flex items-center justify-center mb-4"
-                    style={{ backgroundColor: `${experiment.color}20` }}
-                  >
-                    <span className="text-xl font-bold" style={{ color: experiment.color }}>
-                      {index + 1}
-                    </span>
-                  </div>
+                  <motion.div
+                    animate={{
+                      scale: [1, 1.5, 1],
+                      opacity: [0.15, 0, 0.15],
+                    }}
+                    transition={{
+                      duration: 3,
+                      repeat: Infinity,
+                      ease: 'easeInOut',
+                      delay: index * 0.5,
+                    }}
+                    className="absolute inset-0 rounded-xl"
+                    style={{ backgroundColor: `${experiment.color}` }}
+                  />
+                  <div className="relative z-10">
+                    <div
+                      className="w-12 h-12 rounded-lg flex items-center justify-center mb-4"
+                      style={{ backgroundColor: `${experiment.color}20` }}
+                    >
+                      <span className="text-xl font-bold" style={{ color: experiment.color }}>
+                        {index + 1}
+                      </span>
+                    </div>
                   <h3 className="text-xl font-semibold text-white mb-2">
                     {experiment.name}
                   </h3>
@@ -155,6 +187,7 @@ export default function AIPlayground() {
                   <p className="text-gray-400 text-sm leading-relaxed">
                     {experiment.theme}
                   </p>
+                  </div>
                 </motion.div>
               ))}
             </motion.div>

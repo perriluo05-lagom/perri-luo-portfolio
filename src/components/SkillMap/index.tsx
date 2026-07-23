@@ -361,9 +361,19 @@ export default function SkillMap() {
           <h2 className="text-4xl md:text-5xl font-light text-white mb-4">
             Capability Network
           </h2>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            <span className="text-accent-mint font-medium animate-pulse">Click</span> the circles to explore my interconnected capabilities
-          </p>
+          <motion.p
+            animate={{
+              color: ['#9ca3af', '#85cdca', '#9ca3af'],
+            }}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              ease: 'easeInOut',
+            }}
+            className="text-lg max-w-2xl mx-auto font-medium"
+          >
+            Click the circles to explore my interconnected capabilities
+          </motion.p>
         </motion.div>
 
         <div className="relative h-[600px] md:h-[700px]">

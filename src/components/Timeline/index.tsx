@@ -24,11 +24,24 @@ export default function Timeline() {
           <h2 className="text-4xl md:text-5xl font-light text-white mb-4">
             My Intellectual Journey
           </h2>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-400 text-lg max-w-2xl mx-auto mb-4">
             A reflection on how my understanding of finance has evolved — 
             from seeing markets as information systems to recognizing 
             the importance of judgment in an AI era
           </p>
+          <motion.p
+            animate={{
+              color: ['#9ca3af', '#85cdca', '#9ca3af'],
+            }}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              ease: 'easeInOut',
+            }}
+            className="text-base font-medium"
+          >
+            Click on each milestone to explore deeper
+          </motion.p>
         </motion.div>
         
         <div className="relative">

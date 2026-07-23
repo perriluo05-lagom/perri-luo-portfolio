@@ -4,8 +4,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 
 const navItems = [
-  { label: 'Timeline', href: '#timeline' },
-  { label: 'Skills', href: '#skills' },
+  { label: 'Intellectual Journey', href: '#timeline' },
+  { label: 'Capability Network', href: '#skills' },
   { label: 'Projects', href: '#projects' },
   { label: 'AI Lab', href: '#ai' },
   { label: 'Contact', href: '#contact' },

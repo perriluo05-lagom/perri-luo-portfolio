@@ -1,11 +1,11 @@
-import DailyStock from './DailyStock';
+import ResearchWall from './ResearchWall';
 import ProspectTheory from './ProspectTheory';
 import IndustryResearch from './IndustryResearch';
 
 export default function Projects() {
   return (
     <div className="relative">
-      <DailyStock />
+      <ResearchWall />
       <ProspectTheory />
       <IndustryResearch />
     </div>

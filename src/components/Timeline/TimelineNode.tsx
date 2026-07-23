@@ -31,22 +31,37 @@ export default function TimelineNode({ node, isActive, onClick, index }: Timelin
     >
       <div className="absolute left-6 top-0 bottom-0 w-px bg-dark-600" />
       
-      <motion.button
-        onClick={onClick}
-        className="relative z-10 flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300"
-        style={{
-          backgroundColor: isActive ? node.color : 'rgba(255, 255, 255, 0.05)',
-          border: `2px solid ${isActive ? node.color : node.color}`,
-          boxShadow: isActive ? `0 0 20px ${node.color}40` : `0 0 10px ${node.color}20`,
-        }}
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.95 }}
-      >
-        <IconComponent 
-          size={24} 
-          style={{ color: isActive ? '#ffffff' : node.color }} 
+      <div className="relative">
+        <motion.div
+          animate={{
+            scale: [1, 1.4, 1],
+            opacity: [0.3, 0, 0.3],
+          }}
+          transition={{
+            duration: 2.5,
+            repeat: Infinity,
+            ease: 'easeInOut',
+          }}
+          className="absolute inset-0 rounded-full"
+          style={{ backgroundColor: node.color }}
         />
-      </motion.button>
+        <motion.button
+          onClick={onClick}
+          className="relative z-10 flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300"
+          style={{
+            backgroundColor: isActive ? node.color : 'rgba(255, 255, 255, 0.05)',
+            border: `2px solid ${isActive ? node.color : node.color}`,
+            boxShadow: isActive ? `0 0 20px ${node.color}40` : `0 0 10px ${node.color}20`,
+          }}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          <IconComponent 
+            size={24} 
+            style={{ color: isActive ? '#ffffff' : node.color }} 
+          />
+        </motion.button>
+      </div>
       
       <div className="ml-8 flex-1">
         <div 
