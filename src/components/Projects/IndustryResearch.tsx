@@ -661,12 +661,11 @@ export default function IndustryResearch() {
                   {researchNodes.map((node, i) => (
                     <motion.g
                       key={node.id}
-                      initial={{ scale: 0, opacity: 0, y: node.y }}
+                      initial={{ scale: 0, opacity: 0 }}
                       whileInView={{ scale: 1, opacity: 1 }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.4, delay: 0.5 + i * 0.1 }}
                       animate={{ y: [node.y, node.y - 5, node.y] }}
-                      transition={{ duration: 3 + i * 0.5, repeat: Infinity, ease: 'easeInOut' }}
                       className="cursor-pointer"
                       onClick={() => setSelectedNode(selectedNode === node.id ? null : node.id)}
                       onMouseEnter={() => setHoveredNode(node.id)}
